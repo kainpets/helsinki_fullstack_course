@@ -1,0 +1,30 @@
+RENDER ON POST REQUEST
+
+browser -> HTTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+browser sends data to the server
+
+server -> HTML-code
+browser -> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+browser -> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server -> browser: main.css
+browser -> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server -> browser: main.js
+browser -> server: HTTP GET chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/installHook.js
+
+browser executes the main.js script that fetches data 
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+
+SPA
+browser -> HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server -> HTML-code
+browser -> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server -> browser: main.css
+browser -> server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server -> browser: spa.js
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+browser -> server: HTTP GET chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/installHook.js
+browser executes the spa.js script that fetches data 
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+
+browser -> HTTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+new note gets posted to the server
