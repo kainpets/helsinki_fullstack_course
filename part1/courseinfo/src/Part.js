@@ -1,12 +1,9 @@
 import React from 'react'
 
 const Part = (props) => {
-  const {parts, exercises} = props;
-
+  console.log(props.courses.course);
   return (
-    <p>
-      {parts} {exercises}
-    </p>
+    <p>{props.courses.course.name} {props.courses.course.exercises}</p>
   )
 }
 
